@@ -1,0 +1,19 @@
+.hour-card
+{
+    flex: 1;
+}
+
+.hour-card__time
+{
+    width: 100%;
+    display:block;
+    text-align: center;
+    font-size: 20px;
+}
+
+.hour-card__temp
+{
+    width: 100%;
+    text-align: center;
+    display: block;
+}
