@@ -24,3 +24,18 @@
 .day-card:hover,.day-card--active{
     background-color: #f0f0f0;  
 }
+.day-card__min
+{
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+}
+
+
+.day-card__max
+{
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+}

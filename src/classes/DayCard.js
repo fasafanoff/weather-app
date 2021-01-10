@@ -25,9 +25,9 @@ function DayCard(props)
     return (
       <div className="day-card" onClick={props.onClick}>
         <div>{props.dow}</div>
-            <img alt={props.weather }src={map[props.weather]}/>
-        <span>{props.max}</span>
-        <span>{props.min}</span>
+        <img alt={props.weather} src={map[props.weather]} />
+        <span className="temp day-card__max">{props.max}</span>
+        <span className="temp day-card__min">{props.min}</span>
       </div>
     );
 }
