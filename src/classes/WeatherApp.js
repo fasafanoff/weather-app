@@ -8,8 +8,8 @@ import DayCards from "./DayCards";
 function App() {
   return (
     <div className="App">
-      <HourCards/>
-      <DayCards/>
+      <HourCards />
+      <DayCards />
     </div>
   );
 }
