@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './WeatherApp';
+import App from './classes/WeatherApp';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
