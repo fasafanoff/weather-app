@@ -1,9 +1,15 @@
 import './../css/WeatherApp.css';
+import HourCards from "./HourCards";
+import DayCards from "./DayCards";
+
+
+
 
 function App() {
   return (
     <div className="App">
-        Test
+      <HourCards/>
+      <DayCards/>
     </div>
   );
 }
