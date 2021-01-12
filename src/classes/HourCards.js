@@ -1,16 +1,35 @@
 import HourCard from './HourCard';
 import "../css/HourCards.css"
 
+
+/**
+ * 
+ * @param {Object} props 
+ * {
+ *  hourly, -- array of temperatures
+ * }
+ */
 function HourCards(props) {
 
+    if (!props.hourly||!props.hourly.length) return <div>Loading...</div>
     let hours = [];
-    for (let i = 0; i < 8; ++i)//we'll use 8 hour points separeted by 3 hours
-    {
-        // for now temperature is random
-        hours.push(<HourCard time={`${i * 3}:00`} temp={Math.floor(Math.random() * 10)} key={i/**indecies is safe to use */}/>)
+    
+    for (
+      var i = 0;
+      i < Math.floor(props.hourly.length / 3);
+      ++i //we'll use 8 hour points separeted by 3 hours
+    ) {
+      let hour = props.hourly[i * 3];
+      let date = new Date(hour.dt * 1000);
+
+      hours.push(
+        <HourCard
+          time={`${date.getHours()}:00`}
+          temp={hour.temp}
+          key={i /**indecies is safe to use */}
+        />
+      );
     }
-
-
     return <div className="hour-cards">{hours}</div>;
 }
 

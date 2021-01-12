@@ -4,6 +4,14 @@ import './index.css';
 import App from './classes/WeatherApp';
 import reportWebVitals from './reportWebVitals';
 
+
+
+
+
+
+
+
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
