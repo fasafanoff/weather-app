@@ -4,7 +4,8 @@ import "./../css/DayCard.css"
 
 //Object that map weather(ex. cloudy)and link to an img
 const map = {
-  "cloudy": "https://duckduckgo.com/assets/weather/svg/new/cloudy.svg",
+  Clouds: "https://duckduckgo.com/assets/weather/svg/new/cloudy.svg",
+  Snow: "https://duckduckgo.com/assets/weather/svg/new/snow.svg",
 };
 
 
@@ -23,7 +24,7 @@ const map = {
 function DayCard(props)
 {
     return (
-      <div className="day-card" onClick={props.onClick}>
+      <div className="day-card" onClick={()=>props.onClick(props.id)}>
         <div>{props.dow}</div>
         <img alt={props.weather} src={map[props.weather]} />
         <span className="temp day-card__max">{props.max}</span>
